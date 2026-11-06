@@ -1,0 +1,16 @@
+# Never commit live secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vercel/
+node_modules/
+coverage/
+*.log
+local-server.out
+tests-output.txt
+.DS_Store
+__pycache__/
+qa/
+public/

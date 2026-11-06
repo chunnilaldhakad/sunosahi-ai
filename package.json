@@ -1,0 +1,19 @@
+{
+  "name": "sunosahi-ai-gnani-challenge",
+  "version": "1.0.0-rc.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "node server.js",
+    "verify:live": "node scripts/verify-gnani-live.mjs",
+    "check": "node --check server.js && node --check src/app.js && node --check src/core.js && node --check src/extract.js && node --check src/voice.js && node --check src/sha256.js && node --check src/gnani-live-smoke.js && node --check scripts/build-public.mjs && node --check scripts/repo-preflight.mjs && node --check api/status.js && node --check api/gnani/stt.js && node --check api/gnani/tts.js && node --check api/gnani/selftest.js",
+    "build": "node scripts/build-public.mjs",
+    "preflight": "node scripts/repo-preflight.mjs",
+    "test:browser": "python scripts/browser-e2e.py"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "description": "Premium mobile-ready wage agreement verifier with server-only Gnani STT/TTS adapter and tests"
+}

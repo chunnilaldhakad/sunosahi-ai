@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: sunosahi-ai
+    runtime: node
+    buildCommand: npm test
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ENABLE_LIVE_GNANI
+        value: "0"
+      - key: GNANI_API_KEY
+        sync: false
+      - key: DEMO_ACCESS_TOKEN
+        sync: false
